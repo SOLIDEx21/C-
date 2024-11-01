@@ -6,45 +6,45 @@ int main()
 {
     int a, b;
     cout << "Ilk Numaryi Gir: ";
-    cin >> a; // Read value for a
+    cin >> a; 
     cout << "Ikinci Numarayi Gir: ";
-    cin >> b; // Read value for b
+    cin >> b; 
 
     char operation;
     cout << "CHOOSE OPERATION [*, +, -, /,]: ";
     cin >> operation; 
 
-    float result; // Declare result variable
+    float result; 
 
-    // Use a switch statement to perform the operation
+    
     switch (operation) {
         case '+':
             result = a + b;
             cout << "Result: " << result << endl;
-            break; // Add break to exit the switch after executing the case
+            break;
 
         case '-':
             result = a - b;
             cout << "Result: " << result << endl;
-            break; // Add break to exit the switch after executing the case
+            break; 
 
         case '/':
-            if (b != 0) { // Check for division by zero
-                result = static_cast<float>(a) / b; // Ensure floating-point division
+            if (b != 0) { 
+                result = static_cast<float>(a) / b; 
                 cout << "Result: " << result << endl;
             } else {
-                cout << "Error: Division by zero!" << endl; // Handle division by zero
+                cout << "Error: Division by zero!" << endl; 
             }
-            break; // Add break to exit the switch after executing the case
+            break; 
 
         case '*':
-            result = a * b; // a ile b nin carpimi
+            result = a * b; 
             cout << "Result: " << result << endl;
-            break; // Add break to exit the switch after executing the case
+            break; 
         default:
-            cout << "Yanlis Secim!" << endl; // Handle invalid operation
-            break; // Add break for completeness
+            cout << "Yanlis Secim!" << endl; 
+            break; 
     }
 
-    return 0; // Correct return statement
+    return 0; 
 }
