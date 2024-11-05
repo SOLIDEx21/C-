@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath> 
+#include <string>
 using namespace std;
 
 int main2()
@@ -11,7 +12,7 @@ int main2()
     cin >> b;
 
     char operation;
-    cout << "Yapmak Istediginiz Islemi Secin [*, +, -, /, r,]: ";
+    cout << "Yapmak Istediginiz Islemi Secin [*, +, -, /, ra, rb]: ";
     cin >> operation;
 
     float result;
@@ -27,8 +28,23 @@ int main2()
         break;
 
     case 'ra':
-        result = sqrt(a);
-        cout << "Sonuc: " << result << endl;
+        if (a >= 0) {
+            result = sqrt(a);
+            cout << "Sonuc: " << result << endl;
+        }
+        else {
+            cout << "Pozitif Bir Sayi Olmalidir" << endl;
+        }
+        break;
+
+    case 'rb':
+        if (b >= 0) {
+            result = sqrt(b);
+            cout << "Sonuc: " << result << endl;
+        }
+        else {
+            cout << "Pozitif Bir Sayi Olmalidir" << endl;
+        }
         break;
 
     case '-':
